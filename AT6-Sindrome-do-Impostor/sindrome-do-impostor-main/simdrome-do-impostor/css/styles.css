@@ -1,0 +1,49 @@
+/* Design System Próprio com Variáveis CSS */
+:root {
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --bg-surface: #ffffff;
+    --text-main: #0f172a;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-bs-theme="dark"] {
+    --primary-color: #818cf8;
+    --primary-hover: #6366f1;
+    --bg-surface: #0f172a;
+    --text-main: #f8fafc;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-surface);
+    transition: var(--transition-smooth);
+}
+
+.font-monospace {
+    font-family: 'Fira Code', monospace;
+}
+
+/* Microinterações e Efeitos Visuais */
+.card {
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(100, 116, 139, 0.15) !important;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -10px rgba(99, 102, 241, 0.2) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: var(--transition-smooth);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: scale(1.02);
+}
